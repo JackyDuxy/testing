@@ -1,0 +1,76 @@
+body{
+    text-align: center;
+    background-image: url("https://i.ytimg.com/vi/Bj3qepNUFyE/mqdefault.jpg");
+}
+
+h1{
+    font-size: 34px;
+    color: aliceblue;
+}
+
+p{
+    color: aliceblue;
+}
+
+.login{
+    /* width: 400px; */
+    border: 7px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: 18px;
+    font-family: 'Arial';
+}
+
+.signup{
+    font-size: 18px;
+    color: blue;
+    background-color: none;
+    border: none;
+}
+
+.signup:hover{
+    color: rgb(0, 202, 202);
+    text-decoration: underline;
+}
+
+.sign_up{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.signup{
+    margin: 18px;
+    margin-left: 9px;
+    font-family: Arial;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+  
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+  
+.shape{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    pointer-events: none; /* This ensures that shapes won't interfere with mouse interactions */
+}
+
+input{
+    size: 150%;
+    margin: 10px;
+    border: 4px solid rgb(255, 0, 162);
+}

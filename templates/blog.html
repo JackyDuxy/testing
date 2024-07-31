@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Blog website</title>
+  <link href="{{ url_for('static', filename='blog.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+
+ 
+
+</head>
+
+<body>
+
+    <h1>Ur customised To-do list</h1>
+    <br>
+    <p1>The amount of the tasks you finished will showned right here⬇️</p1>
+    <br>
+    <br>
+    <p1 class="counter" id="counter">Finished: 0</p1>
+    <br>
+    <br>
+
+  
+    <input class="Inputs" id="descripition" type="text" name="task" placeholder="The tasks you want to add: ">
+    <input class="Inputs" id="task_img" type="text" name="image" placeholder="The image u want to add(url): ">
+    <br>
+    <button id="submit">Submit</button>
+    <button id="showhistory">History</button>
+    <button id="deletehistory">Delete History</button>
+    
+    <br>
+    <br>
+    <p1>
+        The things will show up right here⬇️, 
+        click submit when u finish typing the things =D
+    </p1>
+    
+    <div class="display" id="display">
+        <br>
+        
+    </div>
+
+    <br>
+    <br>
+
+    <script> 
+      // this is prev container
+      var prev_containers =  {{json_data| safe}}
+      var username = prev_containers[0]["user_name"]
+      var unique_id = prev_containers[0]["unique_id"] + 1
+
+      const finish = document.getElementById("FinishButton")
+      counter.innerText = "Finished: " +  prev_containers[0]["num"];
+
+      console.log(prev_containers)
+
+    </script>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    
+  </body>
+
+</html>
